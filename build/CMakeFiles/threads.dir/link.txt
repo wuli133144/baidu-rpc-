@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/threads.dir/test_thread_group1.cc.o  -o threads  -L/usr/local/lib  -L/usr/local -rdynamic -lprotobuf -lpthread -lz -lsnappy -lsofa-pbrpc -lgtest -lgtest_main -lgflags -Wl,-rpath,/usr/local/lib:/usr/local 

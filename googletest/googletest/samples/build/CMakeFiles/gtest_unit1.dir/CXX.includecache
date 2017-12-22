@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/dev/opts/sofa-pbrpc/unit-test/googletest/googletest/samples/sample1.cc
+sample1.h
+/dev/opts/sofa-pbrpc/unit-test/googletest/googletest/samples/sample1.h
+
+/dev/opts/sofa-pbrpc/unit-test/googletest/googletest/samples/sample1.h
+
+/dev/opts/sofa-pbrpc/unit-test/googletest/googletest/samples/sample1_unittest.cc
+limits.h
+-
+sample1.h
+/dev/opts/sofa-pbrpc/unit-test/googletest/googletest/samples/sample1.h
+gtest/gtest.h
+-
+

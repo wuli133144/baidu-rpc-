@@ -1,0 +1,53 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /dev/opts/sofa-pbrpc/unit-test/googletest-release-1.7.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2670755510/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2670755510.dir/build.make CMakeFiles/cmTryCompileExec2670755510.dir/build
+gmake[1]: 进入目录“/dev/opts/sofa-pbrpc/unit-test/googletest-release-1.7.0/CMakeFiles/CMakeTmp”
+/usr/bin/cmake -E cmake_progress_report /dev/opts/sofa-pbrpc/unit-test/googletest-release-1.7.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2670755510.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2670755510.dir/CheckSymbolExists.c.o   -c /dev/opts/sofa-pbrpc/unit-test/googletest-release-1.7.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2670755510
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2670755510.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2670755510.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2670755510 -rdynamic 
+CMakeFiles/cmTryCompileExec2670755510.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: 错误：ld 返回 1
+gmake[1]: 离开目录“/dev/opts/sofa-pbrpc/unit-test/googletest-release-1.7.0/CMakeFiles/CMakeTmp”
+gmake[1]: *** [cmTryCompileExec2670755510] 错误 1
+gmake: *** [cmTryCompileExec2670755510/fast] 错误 2
+
+File /dev/opts/sofa-pbrpc/unit-test/googletest-release-1.7.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /dev/opts/sofa-pbrpc/unit-test/googletest-release-1.7.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec301020591/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec301020591.dir/build.make CMakeFiles/cmTryCompileExec301020591.dir/build
+gmake[1]: 进入目录“/dev/opts/sofa-pbrpc/unit-test/googletest-release-1.7.0/CMakeFiles/CMakeTmp”
+/usr/bin/cmake -E cmake_progress_report /dev/opts/sofa-pbrpc/unit-test/googletest-release-1.7.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec301020591.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec301020591.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec301020591
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec301020591.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec301020591.dir/CheckFunctionExists.c.o  -o cmTryCompileExec301020591 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: 错误：ld 返回 1
+gmake[1]: 离开目录“/dev/opts/sofa-pbrpc/unit-test/googletest-release-1.7.0/CMakeFiles/CMakeTmp”
+gmake[1]: *** [cmTryCompileExec301020591] 错误 1
+gmake: *** [cmTryCompileExec301020591/fast] 错误 2
+
+
